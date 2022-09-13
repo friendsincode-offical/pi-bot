@@ -2,7 +2,26 @@
     "name": "pi_ticktok_bot",
     "description": "Bot to handle live chat and other fun features.  ",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "@node-red-contrib-themes/theme-collection": "^3.0.5",
+        "node-red-contrib-buffer-parser": "^3.2.2",
+        "node-red-contrib-cache": "~2.0.3",
+        "node-red-contrib-config": "~1.2.1",
+        "node-red-contrib-context-editor": "~0.0.1",
+        "node-red-contrib-discord-advanced": "~3.3.4",
+        "node-red-contrib-moment": "~4.0.0",
+        "node-red-contrib-play-audio": "^2.5.0",
+        "node-red-contrib-python3-function": "~0.0.4",
+        "node-red-contrib-ui-upload": "~0.5.2",
+        "node-red-contrib-viseo-google-youtube": "~0.2.1",
+        "node-red-dashboard": "~3.2.0",
+        "node-red-discord-alternative": "~1.0.0",
+        "node-red-node-pi-gpio": "^2.0.5",
+        "node-red-node-ping": "^0.3.1",
+        "node-red-node-random": "^0.4.0",
+        "node-red-node-serialport": "^1.0.1",
+        "node-red-node-smooth": "^0.1.2"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

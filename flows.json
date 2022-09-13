@@ -454,7 +454,7 @@
         "type": "debug",
         "z": "683c5ee8de2163b6",
         "name": "Gift debug",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -462,8 +462,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 180,
+        "x": 1010,
+        "y": 160,
         "wires": []
     },
     {
@@ -471,7 +471,7 @@
         "type": "debug",
         "z": "683c5ee8de2163b6",
         "name": "Likes Debug",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -651,7 +651,7 @@
         "type": "debug",
         "z": "683c5ee8de2163b6",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -713,7 +713,7 @@
         "type": "debug",
         "z": "683c5ee8de2163b6",
         "name": "debug 25",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -730,7 +730,7 @@
         "type": "debug",
         "z": "683c5ee8de2163b6",
         "name": "debug 26",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -747,7 +747,7 @@
         "type": "debug",
         "z": "683c5ee8de2163b6",
         "name": "debug 27",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -924,8 +924,8 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Spawn text",
-        "x": 2990,
+        "name": "led-image-viewer",
+        "x": 3010,
         "y": 1680,
         "wires": [
             [
@@ -995,7 +995,7 @@
         "type": "function",
         "z": "683c5ee8de2163b6",
         "name": "Load The Screens",
-        "func": "/*\n//home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf ' ♥Thank you♥ ' --led-no-hardware-pulse -C255,145,0\"\n//./led-image-viewer --led-rows=64 --led-cols=64 --led-chain=2 -f -w10 /*.png --led-no-hardware-pulse --led-gpio-mapping=\"adafruit-hat\" -C --led-brightness=10 --led-slowdown-gpio=3\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \" --led-no-hardware-pulse -C255,145,0\n///home/pi / rpi - rgb - led - matrix / examples - api - use / scrolling - text - example - s 0 --led - rows=64 --led - cols=64 --led - chain=2 --led - brightness=50 --led - slowdown - gpio=3 - f / home / pi / rpi - rgb - led - matrix / fonts / 10x20.bdf \" ♥Thank you♥ \" - y20--led - no - hardware - pulse\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \"  -y40 --led-no-hardware-pulse -C25,255,200\n*/\n\nif(msg.end){\n    msg.payload =\"\"\n    msg.delay = global.get(\"tiktok_movie_onTime\")*1000\n    node.warn(msg.delay)\n    //msg.payload = \"-s10  --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf  ♥Thank you!♥ -C255,0,248 -b5,2 -x2 --led-no-hardware-pulse\"\n    //node.warn(global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\"))\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_1\") +\n      \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_1\") + \n      \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -b5,2 -x\" + global.get(\"tiktok_Text_startx_1\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_1\") +\" --led-no-hardware-pulse ♥Thank you!♥ \"\n    \n    node.send([msg])\n//--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_2\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_2\") + \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_2\")  + \" -C\" + global.get(\"tiktok_Text_color_2\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_2\") +\" -x\" +\n      global.get(\"tiktok_Text_startx_2\") +\n      \" --led-no-hardware-pulse ♥\" + msg.old.repeatCount + \" X \" + msg.old.giftName + \"♥ \"\n    node.send([null, msg]); \n    //--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_3\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" \n     + global.get(\"tiktok_Text_brightness_3\") + \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" \n     + global.get(\"tiktok_Text_font_3\") + \" -C\" + global.get(\"tiktok_Text_color_3\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") \n     + \" -y\" + global.get(\"tiktok_Text_starty_3\") +\" -x\" +\n     global.get(\"tiktok_Text_startx_3\") +\" --led-no-hardware-pulse ♥\" + msg.old.uniqueId + \"♥\"\n    node.send([null,null, msg]); \n            \n    msg.payload = \"--led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" + global.get(\"tiktok_Movie_brightness\") +\" --led-slowdown-gpio=2 -f -w2 \" + msg.old.filename1 + \" -f -w2 \" + msg.old.filename2 +\" --led-gpio-mapping=adafruit-hat -C --led-no-hardware-pulse\"\n    node.send([null,null, null, msg])\n    //return msg\n}\n",
+        "func": "/*\n//home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf ' ♥Thank you♥ ' --led-no-hardware-pulse -C255,145,0\"\n//./led-image-viewer --led-rows=64 --led-cols=64 --led-chain=2 -f -w10 /*.png --led-no-hardware-pulse --led-gpio-mapping=\"adafruit-hat\" -C --led-brightness=10 --led-slowdown-gpio=3\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \" --led-no-hardware-pulse -C255,145,0\n///home/pi / rpi - rgb - led - matrix / examples - api - use / scrolling - text - example - s 0 --led - rows=64 --led - cols=64 --led - chain=2 --led - brightness=50 --led - slowdown - gpio=3 - f / home / pi / rpi - rgb - led - matrix / fonts / 10x20.bdf \" ♥Thank you♥ \" - y20--led - no - hardware - pulse\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \"  -y40 --led-no-hardware-pulse -C25,255,200\n*/\n\nif(msg.end){\n    msg.payload =\"\"\n    msg.delay = (global.get(\"tiktok_movie_onTime\")-.100)*1000*2\n    node.warn(msg.delay)\n    //msg.payload = \"-s10  --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf  ♥Thank you!♥ -C255,0,248 -b5,2 -x2 --led-no-hardware-pulse\"\n    //node.warn(global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\"))\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_1\") +\n      \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_1\") + \n      \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -b5,2 -x\" + global.get(\"tiktok_Text_startx_1\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_1\") +\" --led-no-hardware-pulse Thank you! \"\n    \n    node.send([msg])\n//--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_2\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_2\") + \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_2\")  + \" -C\" + global.get(\"tiktok_Text_color_2\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_2\") +\" -x\" +\n      global.get(\"tiktok_Text_startx_2\") +\n      \" --led-no-hardware-pulse \" +\n       msg.old.repeatCount +\n      \" X \" + msg.old.giftName +\n      \" \"\n    node.send([null, msg]); \n    //--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_3\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" \n     + global.get(\"tiktok_Text_brightness_3\") + \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" \n     + global.get(\"tiktok_Text_font_3\") + \" -C\" + global.get(\"tiktok_Text_color_3\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") \n     + \" -y\" + global.get(\"tiktok_Text_starty_3\") +\" -x\" +\n     global.get(\"tiktok_Text_startx_3\") +\" --led-no-hardware-pulse \" + msg.old.uniqueId + \"\"\n    node.send([null,null, msg]); \n            \n  msg.payload = \"--led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n    global.get(\"tiktok_Movie_brightness\") +\n    \" --led-slowdown-gpio=2 -f -w\" +\n    global.get(\"tiktok_movie_onTime\") +\n    \" \" + \n    msg.old.filename1 +\n    \" -f -w\" + global.get(\"tiktok_movie_onTime\")+\n    \" \" + \n    msg.old.filename2 +\n    \" --led-gpio-mapping=adafruit-hat -C --led-no-hardware-pulse\"\n    node.send([null,null, null, msg])\n    //return msg\n}\n",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -1480,15 +1480,20 @@
         "z": "683c5ee8de2163b6",
         "name": "Show Like Count",
         "func": "let msg1 = {}\n\n\nreturn msg;",
-        "outputs": 1,
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2550,
-        "y": 740,
+        "x": 2610,
+        "y": 760,
         "wires": [
-            []
+            [
+                "343bc95bb58bdcf6"
+            ],
+            [
+                "2e9d88cb7f1420d1"
+            ]
         ]
     },
     {
@@ -1522,7 +1527,10 @@
         "x": 2510,
         "y": 660,
         "wires": [
-            []
+            [
+                "343bc95bb58bdcf6",
+                "2e9d88cb7f1420d1"
+            ]
         ]
     },
     {
@@ -1568,6 +1576,103 @@
             [
                 "9bed4060204ba3f4"
             ]
+        ]
+    },
+    {
+        "id": "343bc95bb58bdcf6",
+        "type": "exec",
+        "z": "683c5ee8de2163b6",
+        "command": "/home/pi/rpi-rgb-led-matrix/utils/text-scroller",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Spawn text",
+        "x": 2990,
+        "y": 640,
+        "wires": [
+            [
+                "e101e989d6e31709"
+            ],
+            [
+                "7bfa4fc85b271203"
+            ],
+            [
+                "34fb1738d506fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "e101e989d6e31709",
+        "type": "debug",
+        "z": "683c5ee8de2163b6",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3180,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7bfa4fc85b271203",
+        "type": "debug",
+        "z": "683c5ee8de2163b6",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3180,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "34fb1738d506fcb4",
+        "type": "debug",
+        "z": "683c5ee8de2163b6",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3180,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "2e9d88cb7f1420d1",
+        "type": "exec",
+        "z": "683c5ee8de2163b6",
+        "command": "/home/pi/rpi-rgb-led-matrix/utils/led-image-viewer",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "led-image-viewer",
+        "x": 2990,
+        "y": 760,
+        "wires": [
+            [],
+            [],
+            []
         ]
     },
     {
@@ -4105,6 +4210,55 @@
         "wires": [
             [
                 "4a73b35c940d485d"
+            ]
+        ]
+    },
+    {
+        "id": "15f0d32990674b05",
+        "type": "exec",
+        "z": "39c7fb5bf9a56abc",
+        "command": "systemctl stop nodered && systemctl start nodered",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1150,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a0422324c98891bc",
+        "type": "inject",
+        "z": "39c7fb5bf9a56abc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 840,
+        "y": 80,
+        "wires": [
+            [
+                "15f0d32990674b05"
             ]
         ]
     }
