@@ -32,6 +32,14 @@
         "env": []
     },
     {
+        "id": "5b752e594bbcb9db",
+        "type": "tab",
+        "label": "LED Controls Python Interface",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "d23c75821e825a7e",
         "type": "group",
         "z": "39c7fb5bf9a56abc",
@@ -54,9 +62,7 @@
             "cf5482ad889fcc7d"
         ],
         "x": 154,
-        "y": 2699,
-        "w": 1072,
-        "h": 322
+        "y": 2699
     },
     {
         "id": "89d73c1ec690cc75",
@@ -155,12 +161,16 @@
             "a64ef00ffe8f74a4",
             "4a73b35c940d485d",
             "8efa3b02981a0064",
-            "73ea912fac2becd7"
+            "73ea912fac2becd7",
+            "08f76fe4d71292a7",
+            "a1d7f9a6a922eda6",
+            "2e9c9f45988f7a42",
+            "c9a7f42e3511b26d",
+            "0d5c6030f6916e73",
+            "baa35e4ebaf79a09"
         ],
-        "x": 214,
-        "y": 319,
-        "w": 2052,
-        "h": 1982
+        "x": 184,
+        "y": 339
     },
     {
         "id": "74ea95b81dfebff6",
@@ -177,7 +187,7 @@
             "darkTheme": {
                 "default": "#097479",
                 "baseColor": "#8833f0",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "edited": true,
                 "reset": false
             },
@@ -230,7 +240,7 @@
                     "edited": false
                 },
                 "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
                 }
             },
             "angularTheme": {
@@ -242,9 +252,9 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "Acmegames-bot",
             "hideToolbar": "false",
-            "allowSwipe": "false",
+            "allowSwipe": "mouse",
             "lockMenu": "false",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
@@ -374,6 +384,12 @@
         "className": ""
     },
     {
+        "id": "2e5b291a07a8deea",
+        "type": "websocket-listener",
+        "path": "/python",
+        "wholemsg": "true"
+    },
+    {
         "id": "390e85bcd69050a2",
         "type": "websocket in",
         "z": "683c5ee8de2163b6",
@@ -453,8 +469,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 80,
+        "x": 440,
+        "y": 100,
         "wires": []
     },
     {
@@ -745,12 +761,12 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "{\"giftId\":5655,\"repeatCount\":1,\"repeatEnd\":true,\"groupId\":\"1663025198956\",\"userId\":\"7142274036935148590\",\"secUid\":\"MS4wLjABAAAAfdsLIwNtY1d_lsYSg5xTZLcUYskfacM71DvrNR-tWhjb8NSkgj_O74J24r1vl5NN\",\"uniqueId\":\"Test_Dono\",\"nickname\":\"stinkinkanime\",\"profilePictureUrl\":\"https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7142274454209429546~c5_100x100.webp?x-expires=1663196400&x-signature=8bsszQNFkwYfY1RdkzrkxKwq7vo%3D\",\"followRole\":0,\"userBadges\":[{\"badgeSceneType\":1,\"type\":\"pm_mt_moderator_im\",\"name\":\"Moderator\"}],\"userDetails\":{\"createTime\":\"0\",\"bioDescription\":\"\",\"profilePictureUrls\":[\"https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7142274454209429546~tplv-tiktok-shrink:72:72.webp?x-expires=1663196400&x-signature=A%2FPpKMuIhVLFNDwFhI2k6uhpiP8%3D\",\"https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7142274454209429546~c5_100x100.webp?x-expires=1663196400&x-signature=8bsszQNFkwYfY1RdkzrkxKwq7vo%3D\",\"https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7142274454209429546~c5_100x100.webp?x-expires=1663196400&x-signature=dDrTGxGkpRX1eGvl6ORBUiY6PzM%3D\",\"https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7142274454209429546~c5_100x100.jpeg?x-expires=1663196400&x-signature=h3bRT6jx7yFWyQFHF8k13B3Ij34%3D\"]},\"followInfo\":{\"followingCount\":5,\"followerCount\":2,\"followStatus\":0,\"pushStatus\":0},\"isModerator\":true,\"isNewGifter\":false,\"isSubscriber\":false,\"topGifterRank\":null,\"msgId\":\"7142638130326457131\",\"createTime\":\"1663025202290\",\"displayType\":\"webcast_aweme_gift_send_message\",\"label\":\"{0:user} sent {1:gift} {2:string}\",\"gift\":{\"gift_id\":5655,\"repeat_count\":1,\"repeat_end\":1,\"gift_type\":1},\"describe\":\"Sent Rose\",\"giftType\":1,\"diamondCount\":1,\"giftName\":\"SAMPLE_Rose\",\"giftPictureUrl\":\"https://p19-webcast.tiktokcdn.com/img/maliva/webcast-va/eba3a9bb85c33e017f3648eaf88d7189~tplv-obj.png\",\"timestamp\":1663025202291,\"receiverUserId\":\"7142190885731255342\",\"codetype\":\"gift\"}",
         "payloadType": "json",
-        "x": 2490,
-        "y": 560,
+        "x": 2470,
+        "y": 620,
         "wires": [
             [
                 "9bed4060204ba3f4"
@@ -1126,7 +1142,7 @@
         "type": "function",
         "z": "683c5ee8de2163b6",
         "name": "Load The Screens",
-        "func": "/*\n//home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf ' ♥Thank you♥ ' --led-no-hardware-pulse -C255,145,0\"\n//./led-image-viewer --led-rows=64 --led-cols=64 --led-chain=2 -f -w10 /*.png --led-no-hardware-pulse --led-gpio-mapping=\"adafruit-hat\" -C --led-brightness=10 --led-slowdown-gpio=3\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \" --led-no-hardware-pulse -C255,145,0\n///home/pi / rpi - rgb - led - matrix / examples - api - use / scrolling - text - example - s 0 --led - rows=64 --led - cols=64 --led - chain=2 --led - brightness=50 --led - slowdown - gpio=3 - f / home / pi / rpi - rgb - led - matrix / fonts / 10x20.bdf \" ♥Thank you♥ \" - y20--led - no - hardware - pulse\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \"  -y40 --led-no-hardware-pulse -C25,255,200\n*/\n\nif(msg.end){\n    msg.payload =\"\"\n    msg.delay = (global.get(\"tiktok_movie_onTime\")-.100)*1000*2\n    //node.warn(msg.delay)\n    //msg.payload = \"-s10  --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf  ♥Thank you!♥ -C255,0,248 -b5,2 -x2 --led-no-hardware-pulse\"\n    //node.warn(global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\"))\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_1\") +\n      \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_1\") + \n      \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -b5,2 -x\" + global.get(\"tiktok_Text_startx_1\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_1\") +\" --led-no-hardware-pulse Thank you! \"\n    \n    node.send([msg])\n//--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_2\") +\n     \" --led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_2\") + \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_2\")  + \" -C\" + global.get(\"tiktok_Text_color_2\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_2\") +\" -x\" +\n      global.get(\"tiktok_Text_startx_2\") +\n      \" --led-no-hardware-pulse \" +\n       msg.old.repeatCount +\n      \" X \" + msg.old.giftName +\n      \" \"\n    node.send([null, msg]); \n    //--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_3\") +\n     \" --led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" \n     + global.get(\"tiktok_Text_brightness_3\") + \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" \n     + global.get(\"tiktok_Text_font_3\") + \" -C\" + global.get(\"tiktok_Text_color_3\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") \n     + \" -y\" + global.get(\"tiktok_Text_starty_3\") +\" -x\" +\n     global.get(\"tiktok_Text_startx_3\") +\" --led-no-hardware-pulse \" + msg.old.uniqueId + \"\"\n    node.send([null,null, msg]); \n            \n  msg.payload = \"--led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n    global.get(\"tiktok_Movie_brightness\") +\n    \" --led-slowdown-gpio=2 -f -w\" +\n    global.get(\"tiktok_movie_onTime\") +\n    \" \" + \n    msg.old.filename1 +\n    \" -f -w\" + global.get(\"tiktok_movie_onTime\")+\n    \" \" + \n    msg.old.filename2 +\n    \" --led-gpio-mapping=adafruit-hat -C --led-no-hardware-pulse\"\n    node.send([null,null, null, msg])\n    //return msg\n}\n",
+        "func": "/*\n//home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf ' ♥Thank you♥ ' --led-no-hardware-pulse -C255,145,0\"\n//./led-image-viewer --led-rows=64 --led-cols=64 --led-chain=2 -f -w10 /*.png --led-no-hardware-pulse --led-gpio-mapping=\"adafruit-hat\" -C --led-brightness=10 --led-slowdown-gpio=3\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \" --led-no-hardware-pulse -C255,145,0\n///home/pi / rpi - rgb - led - matrix / examples - api - use / scrolling - text - example - s 0 --led - rows=64 --led - cols=64 --led - chain=2 --led - brightness=50 --led - slowdown - gpio=3 - f / home / pi / rpi - rgb - led - matrix / fonts / 10x20.bdf \" ♥Thank you♥ \" - y20--led - no - hardware - pulse\n///home/pi/rpi-rgb-led-matrix/examples-api-use/scrolling-text-example -s 0 --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=3 -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf \" ♥Thank you♥ \"  -y40 --led-no-hardware-pulse -C25,255,200\n*/\n\nif(msg.end){\n    msg.payload =\"\"\n    msg.delay = (global.get(\"tiktok_movie_onTime\")-.100)*1000*2\n    //node.warn(msg.delay)\n    //msg.payload = \"-s10  --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=50 --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") + \" -f /home/pi/rpi-rgb-led-matrix/fonts/10x20.bdf  ♥Thank you!♥ -C255,0,248 -b5,2 -x2 --led-no-hardware-pulse\"\n    //node.warn(global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\"))\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n     \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_1\") +\n      \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") + \" -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_1\") + \n      \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -b5,2 -x\" + global.get(\"tiktok_Text_startx_1\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_1\") +\" --led-no-hardware-pulse Thank you! \"\n    \n    node.send([msg])\n//--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_2\") +\n     \" --led-limit-refresh=\" + global.get(\"tiktok_refresh\") + \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n      global.get(\"tiktok_Text_brightness_2\") + \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") + \" -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n      global.get(\"tiktok_Text_font_2\")  + \" -C\" + global.get(\"tiktok_Text_color_2\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n      \" -y\" + global.get(\"tiktok_Text_starty_2\") +\" -x\" +\n      global.get(\"tiktok_Text_startx_2\") +\n      \" --led-no-hardware-pulse \" +\n       msg.old.repeatCount +\n      \" X \" + msg.old.giftName +\n      \" \"\n    node.send([null, msg]); \n    //--led-no-hardware-pulse\n    msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_3\") +\n     \" --led-limit-refresh=\" + global.get(\"tiktok_refresh\") + \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" \n     + global.get(\"tiktok_Text_brightness_3\") + \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") + \" -f /home/pi/rpi-rgb-led-matrix/fonts/\" \n     + global.get(\"tiktok_Text_font_3\") + \" -C\" + global.get(\"tiktok_Text_color_3\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") \n     + \" -y\" + global.get(\"tiktok_Text_starty_3\") +\" -x\" +\n     global.get(\"tiktok_Text_startx_3\") +\" --led-no-hardware-pulse \" + msg.old.uniqueId + \"\"\n    node.send([null,null, msg]); \n            \n  msg.payload = \"--led-limit-refresh=\" + global.get(\"tiktok_refresh\") + \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n    global.get(\"tiktok_Movie_brightness\") +\n    \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") + \" -f -w\" +\n    global.get(\"tiktok_movie_onTime\") +\n    \" \" + \n    msg.old.filename1 +\n    \" -f -w\" + global.get(\"tiktok_movie_onTime\")+\n    \" \" + \n    msg.old.filename2 +\n    \" --led-gpio-mapping=adafruit-hat -C --led-no-hardware-pulse\"\n    node.send([null,null, null, msg])\n    //return msg\n}\n",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -1284,8 +1300,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2830,
-        "y": 1020,
+        "x": 2770,
+        "y": 1160,
         "wires": [
             [
                 "d33dc1b4b4e4d4f9",
@@ -1612,14 +1628,14 @@
         "type": "function",
         "z": "683c5ee8de2163b6",
         "name": "Show Like Adverts",
-        "func": "if(msg.kill ==\"\"){\n    if(msg.start_promo==true){\n        msg = {};\n\n        msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n            \" --led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n            global.get(\"tiktok_Text_font_1\") +\n            \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \" -b5,2 -x12 -y\" + global.get(\"tiktok_Text_starty_1\") + \" --led-no-hardware-pulse Thank you! \"\n\n        node.send([msg])\n\n        msg.payload = \"--led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Movie_brightness\") +\n            \" --led-limit-refresh=60 --led-slowdown-gpio=2 --led-gpio-mapping=adafruit-hat -C --led-no-hardware-pulse -f -l5 /pictures/adverts/1.gif -l5 /pictures/adverts/2.gif -l5 /pictures/adverts/3.gif\"\n        node.send([null,msg])\n\n    }else{\n        node.send([msg, msg])\n\n    }\n\n}else{\n\n}\n\n",
+        "func": "if(msg.kill ==\"\"){\n    if(msg.start_promo==true){\n        msg = {};\n\n        msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n            \" --led-limit-refresh=\" + global.get(\"tiktok_refresh\") + \" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") +\" -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n            global.get(\"tiktok_Text_font_1\") +\n            \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \" -b5,2 -x12 -y\" + global.get(\"tiktok_Text_starty_1\") + \" --led-no-hardware-pulse Thank you! \"\n\n        node.send([msg])\n\n        msg.payload = \"--led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Movie_brightness\") +\n            \" --led-limit-refresh=\" + \n            global.get(\"tiktok_refresh\") +\n            \" --led-slowdown-gpio=\" +\n             global.get(\"tiktok_slowdown-gipo\") +\n             \" --led-gpio-mapping=adafruit-hat -C --led-no-hardware-pulse -f -l5 /pictures/adverts/1.gif -l5 /pictures/adverts/2.gif -l5 /pictures/adverts/3.gif -l5 /pictures/adverts/5.gif -l5 /pictures/adverts/6.gif\"\n        node.send([null,msg])\n\n    }else{\n        node.send([msg, msg])\n\n    }\n\n}else{\n\n}\n\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2830,
-        "y": 740,
+        "x": 2890,
+        "y": 680,
         "wires": [
             [],
             [
@@ -1633,14 +1649,14 @@
         "type": "function",
         "z": "683c5ee8de2163b6",
         "name": "Likes Parser",
-        "func": "msg.start_promo = false;\n\nif (msg.kill == \"\") {\n    \"got the kill Sig\"\n    node.send([msg,null,null])\n} else {\n    if (msg.payload.likeCount >= 5 && msg.payload.likeCount <= 10) {\n        msg.start_promo = true;\n    }\n\n    if (msg.payload.likeCount > 10 && msg.payload.likeCount <= 20) {\n        msg.start_promo = true;\n    }\n\n    if (msg.payload.likeCount > 20 && msg.payload.likeCount <= 40) {\n        msg.start_promo = true;\n    }\n    msg.old ={};\n    msg.old = msg.payload;\n    node.warn(msg.old.totalLikeCount.toString())\n    let likeCount = msg.old.totalLikeCount.toString()\n\n    if (msg.start_promo == true) {\n        msg = {};\n\n        msg.payload = \"-s\" + global.get(\"tiktok_Text_speed_1\") +\n            \" --led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n            global.get(\"tiktok_Text_font_1\") +\n            \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \" -b5,2 -x12 -y\" + global.get(\"tiktok_Text_starty_1\") + \" --led-no-hardware-pulse Thank you! \"\n\n        node.send([msg])\n\n        msg.payload = \"-s0 --led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \"  -x0 -y55 --led-no-hardware-pulse Total Likes: \"\n        \n        node.send([null, msg])\n\n        msg.payload = \"-s0 --led-limit-refresh=60 --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=2 -f /home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \"  -x51 -y55 --led-no-hardware-pulse \" + likeCount\n\n        node.send([null,null, msg])\n\n    } else {\n        \n\n    }\n}\n\n",
+        "func": "msg.start_promo = false;\n\nif (msg.kill == \"\") {\n    \"got the kill Sig\"\n    node.send([msg,null,null])\n} else {\n    if (msg.payload.likeCount >= 5 && msg.payload.likeCount <= 10) {\n        msg.start_promo = true;\n    }\n\n    if (msg.payload.likeCount > 10 && msg.payload.likeCount <= 20) {\n        msg.start_promo = true;\n    }\n\n    if (msg.payload.likeCount > 20 && msg.payload.likeCount <= 40) {\n        msg.start_promo = true;\n    }\n    msg.old ={};\n    msg.old = msg.payload;\n    node.warn(msg.old.totalLikeCount.toString())\n    let likeCount = msg.old.totalLikeCount.toString()\n\n    if (msg.start_promo == true) {\n        msg = {};\n\n        msg.payload = \" -s\" + global.get(\"tiktok_Text_speed_1\") +\n            \" --led-limit-refresh=\"+global.get(\"tiktok_refresh\")+\" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=\"+global.get(\"tiktok_slowdown-gipo\")+\" -f /home/pi/rpi-rgb-led-matrix/fonts/\" +\n            global.get(\"tiktok_Text_font_1\") +\n            \" -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \" -b5,2 -x12 -y\" + global.get(\"tiktok_Text_starty_1\") + \" --led-no-hardware-pulse Thank you! \"\n\n        node.send([msg])\n\n        msg.payload = \" -s0 --led-limit-refresh=\" + global.get(\"tiktok_refresh\") +\" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") +\" -f /home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \"  -x0 -y55 --led-no-hardware-pulse Total Likes: \"\n        \n        node.send([null, msg])\n\n        msg.payload = \" -s0 --led-limit-refresh=\" + global.get(\"tiktok_refresh\") +\" --led-gpio-mapping=adafruit-hat --led-rows=64 --led-cols=64 --led-chain=2 --led-brightness=\" +\n            global.get(\"tiktok_Text_brightness_1\") +\n            \" --led-slowdown-gpio=\" + global.get(\"tiktok_slowdown-gipo\") +\" -f /home/pi/rpi-rgb-led-matrix/fonts/4x6.bdf -C\" + global.get(\"tiktok_Text_color_1\").replace(\"rgb(\", \"\").replace(\")\", \"\").replace(\" \", \"\").replace(\" \", \"\") +\n            \"  -x51 -y55 --led-no-hardware-pulse \" + likeCount\n\n        node.send([null,null, msg])\n\n    } else {\n        \n\n    }\n}\n\n",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2570,
-        "y": 260,
+        "x": 2510,
+        "y": 100,
         "wires": [
             [
                 "2f42df18b444299a",
@@ -1867,7 +1883,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2680,
-        "y": 640,
+        "y": 580,
         "wires": []
     },
     {
@@ -2095,7 +2111,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Spawn text",
-        "x": 2910,
+        "x": 2930,
         "y": 120,
         "wires": [
             [
@@ -2249,8 +2265,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Spawn text",
-        "x": 2910,
-        "y": 380,
+        "x": 2890,
+        "y": 460,
         "wires": [
             [
                 "b51dacc4f96f97c8"
@@ -2445,7 +2461,7 @@
         "z": "683c5ee8de2163b6",
         "name": "",
         "pauseType": "delayv",
-        "timeout": "250",
+        "timeout": "1000",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -2456,8 +2472,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2740,
-        "y": 120,
+        "x": 2760,
+        "y": 80,
         "wires": [
             [
                 "fcda61c540d51e11"
@@ -2489,7 +2505,7 @@
         "z": "683c5ee8de2163b6",
         "name": "",
         "pauseType": "delayv",
-        "timeout": "250",
+        "timeout": "1000",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -3303,8 +3319,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1160,
-        "y": 360,
+        "x": 1130,
+        "y": 380,
         "wires": [
             [
                 "d8ba7063c933099a"
@@ -3323,8 +3339,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 360,
+        "x": 1420,
+        "y": 380,
         "wires": [
             [
                 "4a73b35c940d485d",
@@ -3348,8 +3364,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 2150,
-        "y": 1180,
+        "x": 2550,
+        "y": 1240,
         "wires": []
     },
     {
@@ -3362,8 +3378,8 @@
         "links": [
             "e11c4b376c4176f7"
         ],
-        "x": 1605,
-        "y": 360,
+        "x": 1575,
+        "y": 380,
         "wires": []
     },
     {
@@ -3386,8 +3402,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 400,
+        "x": 1110,
+        "y": 420,
         "wires": [
             [
                 "b9e26b23f520230d"
@@ -3414,8 +3430,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 460,
+        "x": 1110,
+        "y": 480,
         "wires": [
             [
                 "5fbe186d87a0d91b"
@@ -3442,8 +3458,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 520,
+        "x": 1110,
+        "y": 540,
         "wires": [
             [
                 "55b3e6ddaa9c4829"
@@ -3470,8 +3486,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 580,
+        "x": 1110,
+        "y": 600,
         "wires": [
             [
                 "61d52ebdc2c5b618"
@@ -3490,8 +3506,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 400,
+        "x": 1380,
+        "y": 420,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3510,8 +3526,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 460,
+        "x": 1380,
+        "y": 480,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3530,8 +3546,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 520,
+        "x": 1380,
+        "y": 540,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3550,8 +3566,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 580,
+        "x": 1380,
+        "y": 600,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3583,8 +3599,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1140,
-        "y": 660,
+        "x": 1110,
+        "y": 680,
         "wires": [
             [
                 "1f02df5ff55b9c9f"
@@ -3616,8 +3632,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1140,
-        "y": 720,
+        "x": 1110,
+        "y": 740,
         "wires": [
             [
                 "4b8fa5c0bfb6615d"
@@ -3649,8 +3665,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1140,
-        "y": 780,
+        "x": 1110,
+        "y": 800,
         "wires": [
             [
                 "b1eb4526a0cbc33a"
@@ -3669,8 +3685,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1400,
-        "y": 680,
+        "x": 1370,
+        "y": 700,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3689,8 +3705,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
-        "y": 720,
+        "x": 1350,
+        "y": 740,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3709,8 +3725,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1400,
-        "y": 760,
+        "x": 1370,
+        "y": 780,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3737,8 +3753,8 @@
         "max": "10",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 880,
+        "x": 1110,
+        "y": 900,
         "wires": [
             [
                 "a4952b0ac8eac9e5"
@@ -3765,8 +3781,8 @@
         "max": "10",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 940,
+        "x": 1120,
+        "y": 960,
         "wires": [
             [
                 "170d3db70c752ea7"
@@ -3785,8 +3801,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 880,
+        "x": 1390,
+        "y": 900,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3805,8 +3821,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 940,
+        "x": 1390,
+        "y": 960,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3825,8 +3841,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 1000,
+        "x": 1390,
+        "y": 1020,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3853,8 +3869,8 @@
         "max": "10",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 1000,
+        "x": 1120,
+        "y": 1020,
         "wires": [
             [
                 "73f405ccc4eba2ac"
@@ -3873,8 +3889,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 1120,
+        "x": 1380,
+        "y": 1140,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3893,8 +3909,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 1180,
+        "x": 1380,
+        "y": 1200,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -3913,8 +3929,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 1240,
+        "x": 1380,
+        "y": 1260,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4072,8 +4088,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1150,
-        "y": 1120,
+        "x": 1120,
+        "y": 1140,
         "wires": [
             [
                 "cbc8188498923783"
@@ -4231,8 +4247,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1150,
-        "y": 1180,
+        "x": 1120,
+        "y": 1200,
         "wires": [
             [
                 "89a4d0faee7d9a5a"
@@ -4390,8 +4406,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1150,
-        "y": 1240,
+        "x": 1120,
+        "y": 1260,
         "wires": [
             [
                 "689f7294c4ed7d79"
@@ -4418,8 +4434,8 @@
         "max": "64",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 1360,
+        "x": 1110,
+        "y": 1380,
         "wires": [
             [
                 "f71c0cacef31d89e"
@@ -4446,8 +4462,8 @@
         "max": "64",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 1420,
+        "x": 1110,
+        "y": 1440,
         "wires": [
             [
                 "3cdfbcd6623bbeb3"
@@ -4474,8 +4490,8 @@
         "max": "64",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 1480,
+        "x": 1110,
+        "y": 1500,
         "wires": [
             [
                 "afed7f0a93b230f0"
@@ -4494,8 +4510,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 1360,
+        "x": 1410,
+        "y": 1380,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4514,8 +4530,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 1420,
+        "x": 1410,
+        "y": 1440,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4534,8 +4550,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 1480,
+        "x": 1410,
+        "y": 1500,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4562,8 +4578,8 @@
         "max": "128",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 1580,
+        "x": 1110,
+        "y": 1600,
         "wires": [
             [
                 "d93651bb07c4d270"
@@ -4590,8 +4606,8 @@
         "max": "128",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 1640,
+        "x": 1110,
+        "y": 1660,
         "wires": [
             [
                 "5286ad88b496365a"
@@ -4618,8 +4634,8 @@
         "max": "128",
         "step": 1,
         "className": "",
-        "x": 1140,
-        "y": 1700,
+        "x": 1110,
+        "y": 1720,
         "wires": [
             [
                 "6dbba96ceb4e8136"
@@ -4638,8 +4654,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 1580,
+        "x": 1410,
+        "y": 1600,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4658,8 +4674,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 1640,
+        "x": 1410,
+        "y": 1660,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4678,8 +4694,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 1700,
+        "x": 1410,
+        "y": 1720,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4706,8 +4722,8 @@
         "max": "64",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 1780,
+        "x": 1120,
+        "y": 1800,
         "wires": [
             [
                 "38ee428ae76ee38c"
@@ -4734,8 +4750,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 1840,
+        "x": 1120,
+        "y": 1860,
         "wires": [
             [
                 "c8c696c53a2f5a59"
@@ -4762,8 +4778,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 1900,
+        "x": 1120,
+        "y": 1920,
         "wires": [
             [
                 "aff0ac51c9312bbd"
@@ -4782,8 +4798,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
-        "y": 1780,
+        "x": 1430,
+        "y": 1800,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4802,8 +4818,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 1840,
+        "x": 1420,
+        "y": 1860,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4822,8 +4838,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 1900,
+        "x": 1420,
+        "y": 1920,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4850,8 +4866,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 2000,
+        "x": 1120,
+        "y": 2020,
         "wires": [
             [
                 "9456d8251da8f804"
@@ -4878,8 +4894,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 2060,
+        "x": 1120,
+        "y": 2080,
         "wires": [
             [
                 "9375f2be5a9db8c5"
@@ -4906,8 +4922,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 2120,
+        "x": 1120,
+        "y": 2140,
         "wires": [
             [
                 "dbfbc1f87730e4a7"
@@ -4926,8 +4942,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 2000,
+        "x": 1420,
+        "y": 2020,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4946,8 +4962,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 2060,
+        "x": 1420,
+        "y": 2080,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4966,8 +4982,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 2120,
+        "x": 1420,
+        "y": 2140,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -4994,8 +5010,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1170,
-        "y": 2200,
+        "x": 1140,
+        "y": 2220,
         "wires": [
             [
                 "2447ea94a791cda5"
@@ -5022,8 +5038,8 @@
         "max": "60",
         "step": 1,
         "className": "",
-        "x": 1150,
-        "y": 2260,
+        "x": 1120,
+        "y": 2280,
         "wires": [
             [
                 "b7acbc186f17abe4"
@@ -5042,8 +5058,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 2200,
+        "x": 1420,
+        "y": 2220,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -5062,8 +5078,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 2260,
+        "x": 1420,
+        "y": 2280,
         "wires": [
             [
                 "4a73b35c940d485d"
@@ -5310,8 +5326,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 400,
+        "x": 820,
+        "y": 420,
         "wires": [
             [
                 "29e4e583542ac7a5"
@@ -5330,8 +5346,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 460,
+        "x": 820,
+        "y": 480,
         "wires": [
             [
                 "b52f6dca6a3db1b7"
@@ -5350,8 +5366,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 520,
+        "x": 820,
+        "y": 540,
         "wires": [
             [
                 "dba4c57fe1d24046"
@@ -5370,8 +5386,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 580,
+        "x": 820,
+        "y": 600,
         "wires": [
             [
                 "f2dbea9ab817ca98"
@@ -5390,8 +5406,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 660,
+        "x": 830,
+        "y": 680,
         "wires": [
             [
                 "d12a64b6bbbf53fe"
@@ -5410,8 +5426,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 720,
+        "x": 830,
+        "y": 740,
         "wires": [
             [
                 "d61284eaaa55fef5"
@@ -5430,8 +5446,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 780,
+        "x": 830,
+        "y": 800,
         "wires": [
             [
                 "13089544e3c794c7"
@@ -5450,8 +5466,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 880,
+        "x": 830,
+        "y": 900,
         "wires": [
             [
                 "5fa03f549340024b"
@@ -5470,8 +5486,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 940,
+        "x": 830,
+        "y": 960,
         "wires": [
             [
                 "f274992b41a6b17f"
@@ -5490,8 +5506,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1000,
+        "x": 830,
+        "y": 1020,
         "wires": [
             [
                 "26e9570ab1e09bd4"
@@ -5510,8 +5526,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 1120,
+        "x": 840,
+        "y": 1140,
         "wires": [
             [
                 "6d226e17aeff7553"
@@ -5530,8 +5546,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 1180,
+        "x": 840,
+        "y": 1200,
         "wires": [
             [
                 "8823bb8e77514177"
@@ -5550,8 +5566,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 1240,
+        "x": 840,
+        "y": 1260,
         "wires": [
             [
                 "8a8485e9ba1c20cb"
@@ -5570,8 +5586,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1360,
+        "x": 830,
+        "y": 1380,
         "wires": [
             [
                 "f53bd2f6fe957c0e"
@@ -5590,8 +5606,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1420,
+        "x": 830,
+        "y": 1440,
         "wires": [
             [
                 "e6309124755a9be9"
@@ -5610,8 +5626,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1480,
+        "x": 830,
+        "y": 1500,
         "wires": [
             [
                 "c0c58e45f44de740"
@@ -5630,8 +5646,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1580,
+        "x": 830,
+        "y": 1600,
         "wires": [
             [
                 "a2e3321a764be914"
@@ -5650,8 +5666,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1640,
+        "x": 830,
+        "y": 1660,
         "wires": [
             [
                 "305f7054ab9455a7"
@@ -5670,8 +5686,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1700,
+        "x": 830,
+        "y": 1720,
         "wires": [
             [
                 "2222b7a8cc77b589"
@@ -5690,8 +5706,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1780,
+        "x": 830,
+        "y": 1800,
         "wires": [
             [
                 "e67ea40d95dae5c8"
@@ -5710,8 +5726,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1840,
+        "x": 830,
+        "y": 1860,
         "wires": [
             [
                 "d339f5e3fa0ae847"
@@ -5730,8 +5746,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 1900,
+        "x": 830,
+        "y": 1920,
         "wires": [
             [
                 "3bf5571ed5b1596a"
@@ -5750,8 +5766,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 2000,
+        "x": 830,
+        "y": 2020,
         "wires": [
             [
                 "3ac5d83e79fe6a80"
@@ -5770,8 +5786,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 2060,
+        "x": 830,
+        "y": 2080,
         "wires": [
             [
                 "9804b043a956bf7f"
@@ -5790,8 +5806,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 2120,
+        "x": 830,
+        "y": 2140,
         "wires": [
             [
                 "da1ad2344fcb819b"
@@ -5810,8 +5826,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 2200,
+        "x": 840,
+        "y": 2220,
         "wires": [
             [
                 "f4613da23ae0102d"
@@ -5830,8 +5846,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 2260,
+        "x": 840,
+        "y": 2280,
         "wires": [
             [
                 "8bfc0cabd1c09e22"
@@ -5850,8 +5866,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 360,
+        "x": 860,
+        "y": 380,
         "wires": [
             [
                 "2669536192a4cf86"
@@ -5881,8 +5897,8 @@
         "links": [
             "cf5482ad889fcc7d"
         ],
-        "x": 255,
-        "y": 1180,
+        "x": 225,
+        "y": 1200,
         "wires": [
             [
                 "559448bda3f5190b",
@@ -5937,8 +5953,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1850,
-        "y": 2180,
+        "x": 1820,
+        "y": 2200,
         "wires": [
             [
                 "0baf69f59be6b8c3"
@@ -5966,11 +5982,263 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1890,
-        "y": 2240,
+        "x": 1860,
+        "y": 2260,
         "wires": [
             [
                 "5a1434106ea35dfc"
+            ]
+        ]
+    },
+    {
+        "id": "c9a7f42e3511b26d",
+        "type": "ui_slider",
+        "z": "39c7fb5bf9a56abc",
+        "g": "89d73c1ec690cc75",
+        "name": "",
+        "label": "Led refresh Selection",
+        "tooltip": "think of it as monitor refresh in hz 1hz = 1 refresh per secon",
+        "group": "ad658f2169a90b4e",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "75",
+        "step": 1,
+        "className": "",
+        "x": 1120,
+        "y": 2440,
+        "wires": [
+            [
+                "a1d7f9a6a922eda6"
+            ]
+        ]
+    },
+    {
+        "id": "0d5c6030f6916e73",
+        "type": "function",
+        "z": "39c7fb5bf9a56abc",
+        "g": "89d73c1ec690cc75",
+        "name": "Get tiktok_refresh global",
+        "func": "msg.payload = global.get(\"tiktok_refresh\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 2440,
+        "wires": [
+            [
+                "c9a7f42e3511b26d"
+            ]
+        ]
+    },
+    {
+        "id": "baa35e4ebaf79a09",
+        "type": "function",
+        "z": "39c7fb5bf9a56abc",
+        "g": "89d73c1ec690cc75",
+        "name": "Get tiktok_slowdown-gipo global",
+        "func": "msg.payload = global.get(\"tiktok_slowdown-gipo\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2360,
+        "wires": [
+            [
+                "2e9c9f45988f7a42"
+            ]
+        ]
+    },
+    {
+        "id": "2e9c9f45988f7a42",
+        "type": "ui_slider",
+        "z": "39c7fb5bf9a56abc",
+        "g": "89d73c1ec690cc75",
+        "name": "",
+        "label": "slowdown-gipo",
+        "tooltip": "Messes with timing on the fluttering of the pins.",
+        "group": "ad658f2169a90b4e",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "4",
+        "step": 1,
+        "className": "",
+        "x": 1140,
+        "y": 2360,
+        "wires": [
+            [
+                "08f76fe4d71292a7"
+            ]
+        ]
+    },
+    {
+        "id": "08f76fe4d71292a7",
+        "type": "function",
+        "z": "39c7fb5bf9a56abc",
+        "g": "89d73c1ec690cc75",
+        "name": "Set tiktok_slowdown-gipo global",
+        "func": "global.set(\"tiktok_slowdown-gipo\", msg.payload);\n\nmsg.payload = \"New Text 2 slowdown-gipo configured as \" + global.get(\"tiktok_slowdown-gipo\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1d7f9a6a922eda6",
+        "type": "function",
+        "z": "39c7fb5bf9a56abc",
+        "g": "89d73c1ec690cc75",
+        "name": "Set tiktok_refresh global",
+        "func": "global.set(\"tiktok_refresh\", msg.payload);\n\nmsg.payload = \"New refresh configured as \" + global.get(\"tiktok_refresh\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d5b96ce30f7707d",
+        "type": "inject",
+        "z": "5b752e594bbcb9db",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "congratulation",
+        "payloadType": "str",
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "4605fbaa15f4807d"
+            ]
+        ]
+    },
+    {
+        "id": "33b2fbe8af7b80d1",
+        "type": "debug",
+        "z": "5b752e594bbcb9db",
+        "name": "debug 63",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a380f68ef22dd98c",
+        "type": "websocket in",
+        "z": "5b752e594bbcb9db",
+        "name": "",
+        "server": "2e5b291a07a8deea",
+        "client": "",
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "33b2fbe8af7b80d1"
+            ]
+        ]
+    },
+    {
+        "id": "4605fbaa15f4807d",
+        "type": "websocket out",
+        "z": "5b752e594bbcb9db",
+        "name": "",
+        "server": "2e5b291a07a8deea",
+        "client": "",
+        "x": 510,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "63c0d02066bb6d69",
+        "type": "google-tts",
+        "z": "5b752e594bbcb9db",
+        "name": "",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "outputField": "payload",
+        "outputFieldType": "msg",
+        "languageField": "en",
+        "languageFieldType": "str",
+        "speedField": "1",
+        "speedFieldType": "num",
+        "x": 420,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "339f8f1310222ef6",
+        "type": "inject",
+        "z": "5b752e594bbcb9db",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "congratulation",
+        "payloadType": "str",
+        "x": 230,
+        "y": 540,
+        "wires": [
+            [
+                "63c0d02066bb6d69"
             ]
         ]
     }
