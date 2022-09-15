@@ -1,7 +1,7 @@
-pi-bot
-======
+pi_ticktok_bot
+==============
 
-pi bot with a little extra 
+Bot to handle live chat and other fun features.  
 
 ### About
 
