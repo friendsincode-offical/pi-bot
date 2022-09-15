@@ -470,7 +470,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 440,
-        "y": 100,
+        "y": 60,
         "wires": []
     },
     {
@@ -6199,6 +6199,7 @@
         "type": "ui_audio",
         "z": "5b752e594bbcb9db",
         "name": "",
+        "group": "ad658f2169a90b4e",
         "voice": "",
         "always": "",
         "x": 460,
